@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Fira Code', monospace;;
+}
+
+:root {
+  --main-color: #CDB4DB;
+  --second-color: #FFC8DD;
+  --trd-color: #FFAFCC;
+  --lg-blue-color: #BDE0FE;
+  --bk-blue-color: #A2D2FF;
+}
+
+/* HEADER */
+/* #header é um container flex*/
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 
+    align-items: alinhamento na vertical
+    justify-content: alinhamento na horizontal
+  */
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+
+  background-color: var(--second-color);
+}
+
+
+
+#main {
+  /* altura de 100% da tela, menos a altura do header e do footer (somadas da 120px) */
+  height: calc(100vh - 120px);
+  display: flex;
+}
+
+
+.main-content {
+  background: var(--main-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* gap é o espacamento entre os itens do contaiener */
+  gap: 10px;
+}
+
+.main-content p {
+  font-size: 14px;
+
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--bk-blue-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#board {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--bk-blue-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#board > div {
+  width: 20px;
+  height: 20px;
+  background: var(--trd-color);
+}
+
+.side-menu {
+  background: var(--lg-blue-color);
+  padding: 30px 0;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.side-menu ul, li, a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+footer {
+  height: 40px;
+  background: var(--second-color) ;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
