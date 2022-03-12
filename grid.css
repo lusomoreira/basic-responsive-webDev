@@ -1,0 +1,61 @@
+:root {
+  --main-color: #CDB4DB;
+  --second-color: #FFC8DD;
+  --trd-color: #FFAFCC;
+  --lg-blue-color: #BDE0FE;
+  --bk-blue-color: #A2D2FF;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: tomato;
+}
+
+
+.container {
+  display: grid;
+
+  grid-template-columns: 3fr 1fr; /* divide as colunas em fracaoes, a primeira tem 3x e segunda 1x */
+  
+  grid-template-rows: 20vh 70vh 10vh; /* divide a altura em 3 linhas, 20partes da tela, 70 partes, 10partes*/
+
+
+
+  grid-template-areas: "header header"
+                        "main aside"
+                        "footer footer"
+
+
+}
+
+header {
+  background: var(--second-color);
+  /* height: 100px; */
+  grid-area: header;
+
+} 
+
+
+
+main {
+  background: var(--main-color);
+  /* height: 100px; */
+  grid-area: main;
+
+} 
+
+aside {
+  background: var(--lg-blue-color);
+  /* height: 100px; */
+  grid-area: aside;
+} 
+
+footer {
+  background: var(--second-color);
+  /* height: 100px; */
+  grid-area: footer;
+} 
+
